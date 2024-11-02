@@ -1,0 +1,284 @@
+/*CSS Reset*/
+body, header, nav, main, footer, img, h1 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/*Style rule for images*/
+img {
+    max-width: 100%; /*The max-width property defines the maximum width of an element. If the content is smaller than the maximum width, the max-width property has no effect.*/
+    display:block; /*Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width*/
+}
+
+/*Style rules for header content*/
+header {
+    text-align: center;
+    font-size: 3em;
+    color: #373684;
+}
+
+header h1{
+    font-style: italic;
+}
+
+/*Style rules for navigation area*/
+nav {
+    background-color:  #373684; /*nav is a block. It goes across the page unless you change the width*/
+}
+
+nav ul {
+    list-style: none; /*ul removed the bullet points and centered the text*/
+    margin: 0;
+    text-align: center;
+}
+
+nav li {
+    display:inline-flex;
+    font-size: 2em; /*li affects the text size*/
+    margin: 0;
+}
+
+nav li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 0.5em 1em;
+    text-decoration: none; /*a removes the underline*/
+}
+
+/*Style rules for main content*/
+main {
+    padding: 2%;
+    background-color: #e5e9fc;
+    overflow: auto; /* Overflow property specifies what should happen if content overflows an element's box. If overflow is clipped, a scroll-bar should be added to see the rest of the content, only works for block elements */
+    font-family: Verdana, Arial, Tahoma, sans-serif;
+}
+
+main p {
+    font-size: 1.25em;
+}
+
+.action {
+    font-size: 1.25em;
+    color: #373684;
+    font-weight: bold;
+}
+
+#piano, #guitar, #violin {
+    width: 29%; /*This is how you make columns*/
+    float: left;
+    margin: 0 2%;
+}
+
+
+
+#info {
+    clear: left;
+    background-color: #c0caf7;
+}
+
+.free {
+   
+    margin-top: 3%;
+
+}
+
+#contact {
+    text-align: center;
+
+}
+
+#contact a {
+    color: #4645a8;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.map {
+    border:5px solid #373684;
+    width: 600px;
+    height: 450px;
+}
+
+/*Style rules for form elements*/
+fieldset, input, textarea {
+    margin-bottom: 2%;
+
+}
+
+fieldset legend {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+label {
+    display: block;
+    padding-top: 1%;
+}
+
+form #submit {
+    margin: 0 auto 0 auto;
+    display: block;
+    padding: 2%;
+    background-color:#78593a;
+    color: #f6eee4;
+    font-size: 1.25em;
+    border-radius: 10px;
+}
+
+/*Style rules for footer content */
+footer {
+    text-align: center;
+    font-size: 0.65em;
+    clear: left;
+}
+
+footer a {
+    color: #4645a8;
+
+}
+
+/*Media Query for Tablet Viewport*/
+@media screen and (min-width:620px),print {
+
+    /* Viewport: Show desktop tab-desk,hide mobile-tablet class*/
+    .mobile-tablet {
+        display: none;
+    }
+
+    /* Tablet Viewport: Show tab-desk,hide mobile class*/
+    .tab-desk {
+        display:block;
+    }
+    .mobile {
+        display:none;
+    }
+    /* Table Viewport: Style rule for header content*/
+    span.tab-desk {
+        display:inline;
+    }
+    /*Tablet Viewport: Style rules for nav area*/
+    nav li {
+        border-top: none;
+        display: inline-block;
+        font-size: 1.5em;
+        border-right: 1px solid #e5e9fc;
+    }
+    nav li:last-child {
+        border-right: none;
+    }
+    nav li a {
+        padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    /*Tablet Viewport: Style rule for map*/
+    .map {
+        width: 500px;
+        height: 450px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 2;
+        grid-gap: 20px;
+
+    }
+
+    aside {
+        grid-column: 1 / span 2;
+    }
+        /*Tablet Viewport: Style rule for form element*/
+        form {
+            width: 70%;
+            margin: 0 auto 0 auto;
+        }
+}
+
+/*Desktop Viewport: Style rule for map*/
+@media screen and (min-width:769px),print {
+
+    /* Desktop Viewport: Style rule for header content*/
+    header {
+        padding: 2%;
+    }
+    /*Desktop Viewport: Style rules for nav area*/
+    nav li a {
+        padding: 0.5em 1.5em 0.5em 1.5em;
+    }
+    nav li a:hover {
+        color: #373684;
+        background-color: #e5e9fc;
+
+    }
+    /*Desktop Viewport: Style rule for main content*/
+    #info ul {
+        margin-left: 5%;
+    }
+    main h3 {
+        font-size: 1.5em;
+    }
+    #piano, #guitar, #violin {
+        width: 29%;
+        float: left;
+        margin: 0 2% 0 2%;
+
+    }
+
+    figcaption {
+        font-size: 1em;
+    }
+    .grid {
+        grid-column: 1 / span 4;
+    }
+    .grid {
+        grid-template-columns: 4;
+    }
+
+    figcaption {
+        font-size: 1em;
+    }
+    .grid {
+        grid-column: 1 / span 4;
+    }
+    /*Green 200*/
+    table {
+        border: 1px solid #2a1f14;
+        border-collapse: collapse;
+        margin: 0 auto 0 auto;
+    }
+    caption {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 1%;
+    }
+    th, td {
+        border: 1px solid #2a1f14; 
+    }
+    th {
+        background-color: #2a1f14;
+        color: #fff;
+        font-size: 1.15em;
+    }
+    tr:nth-child(odd) {
+        background-color: #deccba;
+    }
+    /*Desktop Viewport: Style rule for form element*/
+    form {
+            width: auto;
+        }
+    .form-grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 20px;
+
+        }
+    .btn {
+        grid-column: 1 / span 2;
+    }
+}
+/*Media Query for Print*/
+@media print {
+    body {
+        background-color: #fff;
+        color: #000;
+    }
+}
